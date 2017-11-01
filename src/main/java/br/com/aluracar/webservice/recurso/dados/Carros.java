@@ -1,9 +1,9 @@
-package br.com.aluracar.webservice.resource.data;
+package br.com.aluracar.webservice.recurso.dados;
 
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.aluracar.webservice.model.Carro;
+import br.com.aluracar.webservice.modelo.Carro;
 
 public class Carros {
 	public static List<Carro> listAll() {

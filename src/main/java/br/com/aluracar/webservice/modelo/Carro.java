@@ -1,4 +1,4 @@
-package br.com.aluracar.webservice.model;
+package br.com.aluracar.webservice.modelo;
 
 public class Carro {
 	private String nome;

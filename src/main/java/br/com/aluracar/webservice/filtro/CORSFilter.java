@@ -1,4 +1,4 @@
-package br.com.aluracar.webservice.filter;
+package br.com.aluracar.webservice.filtro;
 
 import java.io.IOException;
 

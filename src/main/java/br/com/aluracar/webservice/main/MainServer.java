@@ -21,7 +21,7 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.message.internal.ReaderWriter;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import br.com.aluracar.webservice.filter.CORSFilter;
+import br.com.aluracar.webservice.filtro.CORSFilter;
 
 public class MainServer {
 

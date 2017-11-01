@@ -1,4 +1,4 @@
-package br.com.aluracar.webservice.resource;
+package br.com.aluracar.webservice.recurso;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import br.com.aluracar.webservice.model.Carro;
-import br.com.aluracar.webservice.resource.data.Carros;
+import br.com.aluracar.webservice.modelo.Carro;
+import br.com.aluracar.webservice.recurso.dados.Carros;
 
 @Path("/carro")
 public class CarroResource {
