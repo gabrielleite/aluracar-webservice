@@ -1,16 +1,18 @@
 package br.com.aluracar.webservice.modelo;
 
+import java.util.List;
+
 public class Carro {
 	private String nome;
 	private double preco;
-	private String fotoUrl;
+	private List<String> fotos;
 	
 	public Carro() {}
 	
-	public Carro(String nome, double preco, String fotoUrl) {
+	public Carro(String nome, double preco, List<String> fotos) {
 		this.nome = nome;
 		this.preco = preco;
-		this.fotoUrl = fotoUrl;
+		this.fotos = fotos;
 	}
 
 	public String getNome() {
@@ -25,10 +27,10 @@ public class Carro {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	public String getFotoUrl() {
-		return fotoUrl;
+	public List<String> getFotos() {
+		return fotos;
 	}
-	public void setFotoUrl(String fotoUrl) {
-		this.fotoUrl = fotoUrl;
+	public void setFotos(List<String> fotos) {
+		this.fotos = fotos;
 	}
 }

@@ -29,8 +29,10 @@ public class MainServer {
 	public static final String APP_PATH = "/";
 	public static final String API_PATH = "/api/";
 	public static final String WEB_ROOT = "/webroot/app";
-	public static int PORT = 8080;
+	public static final String BASE_PACKAGE = "br.com.aluracar.webservice";
+	public static final int PORT = 8080;
 	private static volatile Boolean running = true;
+	private static String ip;
 
 	public static Logger logger = Logger.getLogger(MainServer.class.toString());
 
@@ -57,7 +59,7 @@ public class MainServer {
 				new ResourceConfig()
 					.register(CORSFilter.class)
 					.register(JacksonFeature.class)
-					.packages("br.com.aluracar.webservice"), GrizzlyHttpContainer.class), API_PATH);
+					.packages(BASE_PACKAGE), GrizzlyHttpContainer.class), API_PATH);
 
 		try {
 			// Start the server.
@@ -72,8 +74,8 @@ public class MainServer {
 	public static void main(String[] args) {
 
 		try {
-
-			PORT = (args.length >= 1) ? Integer.parseInt(args[0]) : PORT;
+			
+			ip = (args.length >= 1) ? args[0] : "localhost";
 
 			final HttpServer server = startServer(null);
 
@@ -97,7 +99,7 @@ public class MainServer {
 	}
 
 	public static String getAppUri() {
-		return String.format("http://localhost:%s%s", PORT, APP_PATH);
+		return String.format("http://%s:%s", ip, PORT);
 	}
 
 	/**
