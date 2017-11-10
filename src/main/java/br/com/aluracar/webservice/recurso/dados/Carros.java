@@ -63,11 +63,11 @@ public class Carros {
 					MainServer.getAppUri() + "/images/hilux-4x4-2.jpg",
 					MainServer.getAppUri() + "/images/hilux-4x4-3.jpg"
 				)),
-			new Carro("Montana Cabine Dupla", 57000,
+			new Carro("Montana", 57000,
 				Arrays.asList(
-					MainServer.getAppUri() + "/images/montana-cabine-dupla-1.jpg",
-					MainServer.getAppUri() + "/images/montana-cabine-dupla-2.jpg",
-					MainServer.getAppUri() + "/images/montana-cabine-dupla-3.jpg"
+					MainServer.getAppUri() + "/images/montana-1.jpg",
+					MainServer.getAppUri() + "/images/montana-2.jpg",
+					MainServer.getAppUri() + "/images/montana-3.jpg"
 				)),
 			new Carro("Outlander 2.4", 99000,
 				Arrays.asList(
