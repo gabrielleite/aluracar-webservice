@@ -7,7 +7,7 @@ import br.com.aluracar.webservice.main.MainServer;
 import br.com.aluracar.webservice.modelo.Carro;
 
 public class Carros {
-	public static List<Carro> listAll() {
+	public static List<Carro> listaTodos() {
 		return Arrays.asList(
 			new Carro("Azera V6", 85000,
 				Arrays.asList(

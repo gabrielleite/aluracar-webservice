@@ -16,8 +16,8 @@ public class CarroResource {
 	@GET
 	@Path("/listaTodos")
 	@Produces({MediaType.APPLICATION_JSON})
-	public List<Carro> listAll() {
-		return Carros.listAll();
+	public List<Carro> listaTodos() {
+		return Carros.listaTodos();
 	}
 
 }
