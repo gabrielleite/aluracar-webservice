@@ -1,14 +1,14 @@
 package br.com.aluracar.webservice.recurso.dados;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 import br.com.aluracar.webservice.main.MainServer;
 import br.com.aluracar.webservice.modelo.Carro;
 
 public class Carros {
-	public static List<Carro> listaTodos() {
-		return Arrays.asList(
+	public static Stream<Carro> listaTodos() {
+		return Stream.of(
 			new Carro("Azera V6", 85000,
 				Arrays.asList(
 					MainServer.getAppUri() + "/images/azera-v6-1.jpg",

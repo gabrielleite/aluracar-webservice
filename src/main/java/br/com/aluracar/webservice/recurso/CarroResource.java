@@ -1,6 +1,7 @@
 package br.com.aluracar.webservice.recurso;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,7 +18,8 @@ public class CarroResource {
 	@Path("/listaTodos")
 	@Produces({MediaType.APPLICATION_JSON})
 	public List<Carro> listaTodos() {
-		return Carros.listaTodos();
+		return Carros.listaTodos()
+						.collect(Collectors.toList());
 	}
 
 }
