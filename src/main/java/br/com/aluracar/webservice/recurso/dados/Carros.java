@@ -48,14 +48,13 @@ public class Carros {
 			new Carro("Astra Sedan", 39000,
 				Arrays.asList(
 					MainServer.getAppUri() + "/images/astra-sedan-1.jpg",
-					MainServer.getAppUri() + "/images/astra-sedan-2.jpg",
-					MainServer.getAppUri() + "/images/astra-sedan-3.jpg"
+					MainServer.getAppUri() + "/images/astra-sedan-2.jpg"
 				)),
-			new Carro("Vectra 2.0 Turbo", 37000,
+			new Carro("Audi A3 Sedan",115000,
 				Arrays.asList(
-					MainServer.getAppUri() + "/images/vectra-turbo-20-1.jpg",
-					MainServer.getAppUri() + "/images/vectra-turbo-20-2.jpg",
-					MainServer.getAppUri() + "/images/vectra-turbo-20-3.jpg"
+					MainServer.getAppUri() + "/images/audi-a3-sedan-1.jpg",
+					MainServer.getAppUri() + "/images/audi-a3-sedan-2.jpg",
+					MainServer.getAppUri() + "/images/audi-a3-sedan-3.jpg"
 				)),
 			new Carro("Hilux 4x4", 90000,
 				Arrays.asList(
@@ -81,11 +80,26 @@ public class Carros {
 					MainServer.getAppUri() + "/images/brasilia-amarela-2.jpg",
 					MainServer.getAppUri() + "/images/brasilia-amarela-3.jpg"
 				)),
-			new Carro("Omega Sedan", 80000,
+			new Carro("Porsche 911 Carrera", 100000,
 				Arrays.asList(
-					MainServer.getAppUri() + "/images/omega-sedan-1.jpg",
-					MainServer.getAppUri() + "/images/omega-sedan-2.jpg",
-					MainServer.getAppUri() + "/images/omega-sedan-3.jpg"
+					MainServer.getAppUri() + "/images/porsche-911-carrera-1.jpg",
+					MainServer.getAppUri() + "/images/porsche-911-carrera-2.jpg"
+				)),
+			new Carro("Hyundai HB20", 60000,
+				Arrays.asList(
+					MainServer.getAppUri() + "/images/hyundai-hb20-1.jpg",
+					MainServer.getAppUri() + "/images/hyundai-hb20-2.jpg"
+				)),
+			new Carro("Camaro SS", 120000,
+				Arrays.asList(
+					MainServer.getAppUri() + "/images/camaro-ss-1.jpg",
+					MainServer.getAppUri() + "/images/camaro-ss-2.jpg",
+					MainServer.getAppUri() + "/images/camaro-ss-3.jpg"
+				)),
+			new Carro("BMW Cabrio", 110000,
+				Arrays.asList(
+					MainServer.getAppUri() + "/images/bmw-cabrio-1.jpg",
+					MainServer.getAppUri() + "/images/bmw-cabrio-2.jpg"
 				))
 		);
 	}
