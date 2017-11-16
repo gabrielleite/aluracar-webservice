@@ -1,8 +1,6 @@
 package br.com.aluracar.webservice.recurso;
 
-import javax.ws.rs.Path;
-
-@Path("/concessionaria")
+//@Path("/concessionaria")
 public class ConcessionariaResource {
 	
 //	@GET
