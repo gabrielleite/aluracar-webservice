@@ -1,8 +1,8 @@
 package br.com.aluracar.webservice.recurso;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -10,21 +10,27 @@ import br.com.aluracar.webservice.modelo.Agendamento;
 
 @Path("/agendamento")
 public class AgendamentoResource {
+	
+	private static int contador = 0;
 
 	@POST
 	@Path("/agenda")
-	@Consumes({MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_JSON})
 	public Response agenda(Agendamento agendamento) {
+		contador++;
 		
-		System.out.println("agendamento/agenda");
-		
-		System.out.println(agendamento.getNomeCliente());
-		System.out.println(agendamento.getEnderecoCliente());
-		System.out.println(agendamento.getEmailCliente());
-		System.out.println(agendamento.getData());
-		System.out.println(agendamento.getModeloCarro());
-		System.out.println(agendamento.getPrecoTotal());
-		
-		return Response.ok().build();
+		if (contador % 3 == 0) {
+			contador = 0;
+			
+			System.out.println("Falha no processamento do agendamento...");
+			
+			return Response.serverError().build();
+		} else {
+			System.out.println("Agendamento sendo processado: " + agendamento);
+		}
+		return Response
+				.ok()
+				.entity(agendamento)
+				.build();
 	}
 }

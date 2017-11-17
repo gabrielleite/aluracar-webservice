@@ -1,5 +1,8 @@
 package br.com.aluracar.webservice.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Agendamento {
 	
 	private String nomeCliente;
@@ -12,13 +15,12 @@ public class Agendamento {
 	
 	private String modeloCarro;
 	
-	private double precoTotal;
+	private String precoTotal;
 	
 	public Agendamento() {}
 	
 	public Agendamento(String nomeCliente, String enderecoCliente, String emailCliente, String data, String modeloCarro,
-			double precoTotal) {
-		super();
+			String precoTotal) {
 		this.nomeCliente = nomeCliente;
 		this.enderecoCliente = enderecoCliente;
 		this.emailCliente = emailCliente;
@@ -57,10 +59,21 @@ public class Agendamento {
 	public void setModeloCarro(String modeloCarro) {
 		this.modeloCarro = modeloCarro;
 	}
-	public double getPrecoTotal() {
+	public String getPrecoTotal() {
 		return precoTotal;
 	}
-	public void setPrecoTotal(double precoTotal) {
+	public void setPrecoTotal(String precoTotal) {
 		this.precoTotal = precoTotal;
+	}
+
+	@Override
+	public String toString() {
+		return "[\n  nomeCliente = " + nomeCliente
+				+ ",\n  enderecoCliente = " + enderecoCliente
+				+ ",\n  emailCliente = " + emailCliente
+				+ ",\n  data = " + data
+				+ ",\n  modeloCarro = " + modeloCarro
+				+ ",\n  precoTotal = "
+				+ precoTotal + "\n]";
 	}
 }
