@@ -31,7 +31,7 @@ module.exports = app => {
             console.log('Agendamento recebido: ' + JSON.stringify(req.body));
             res.json(null);
         } else {
-            console.log('Erro no recebimento.');
+            console.log('Erro no processamento do agendamento.');
             res.status(500).end();
         }
     });
