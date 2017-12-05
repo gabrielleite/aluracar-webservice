@@ -22,6 +22,15 @@ module.exports = app => {
         { "nome": "BMW Cabrio", "preco": 110000.0, "fotos": [`http://${ip}:8080/images/bmw-cabrio-1.jpg`, `http://${ip}:8080/images/bmw-cabrio-2.jpg`] }
     ];
 
+    const usuario = {
+        "id": 1,
+        "nome": "João da Silva",
+        "dataNascimento": "30/01/1990",
+        "telefone": "2199887788",
+        "email": "joao@alura.com.br",
+        "senha": "alura123"
+    };
+
     app.get('/api/carro/listaTodos', (req, res) =>
         res.json(carros));
 
@@ -33,6 +42,18 @@ module.exports = app => {
         } else {
             console.log('Erro no processamento do agendamento.');
             res.status(500).end();
+        }
+    });
+
+    app.post('/api/login', (req, res) => {
+        let usuarioLogin = req.body;
+
+        if (usuarioLogin.email == usuario.email 
+            && usuarioLogin.senha == usuario.senha) {
+
+                res.json(usuario);
+        } else {
+            res.status(403).end();
         }
     });
 };
