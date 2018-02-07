@@ -1,3 +1,5 @@
+const https = require('https');
+
 module.exports = app => {
 
     const ip = app.get('ip');
@@ -26,7 +28,7 @@ module.exports = app => {
         "id": 1,
         "nome": "João da Silva",
         "dataNascimento": "30/01/1990",
-        "telefone": "2199887788",
+        "telefone": "(21) 9988-7788",
         "email": "joao@alura.com.br",
         "senha": "alura123"
     };
@@ -36,8 +38,12 @@ module.exports = app => {
 
     app.post('/api/agendamento/agenda', (req, res) => {
         counter++;
+
+        const agendamento = req.body;
+        
         if (counter % 3 != 0) {
-            console.log('Agendamento recebido: ' + JSON.stringify(req.body));
+            console.log('Agendamento recebido: ' + JSON.stringify(agendamento));
+            setTimeout(() => enviaNotificacao(agendamento), 5000);
             res.json(null);
         } else {
             console.log('Erro no processamento do agendamento.');
@@ -56,4 +62,44 @@ module.exports = app => {
             res.status(403).end();
         }
     });
+
+    function enviaNotificacao(agendamento) {
+        const agendamentoId = agendamento.emailCliente + agendamento.data.substr(0, 10);
+
+        const message = { 
+            app_id: "e53f5d24-40e4-458f-99db-5230cf3f8bc0",
+            headings: {"en": "Aluracar"},
+            contents: {"en": "Agendamento confirmado!"},
+            data: {"agendamento-id": agendamentoId},
+            included_segments: ["All"]
+        };
+
+        const headers = {
+            "Content-Type": "application/json; charset=utf-8",
+            "Authorization": "Basic MGJlOGMxZGEtMDY3Ni00NWY3LWI0ZjYtMjRjMjYzMzhmZmEz"
+        };
+        
+        const options = {
+            host: "onesignal.com",
+            port: 443,
+            path: "/api/v1/notifications",
+            method: "POST",
+            headers: headers
+        };
+        
+        const req = https.request(options, function(res) {  
+          res.on('data', function(data) {
+            // console.log("Response:");
+            // console.log(JSON.parse(data));
+          });
+        });
+        
+        req.on('error', function(e) {
+          console.log("ERROR:");
+          console.log(e);
+        });
+        
+        req.write(JSON.stringify(message));
+        req.end();
+      }
 };
