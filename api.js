@@ -10,7 +10,7 @@ module.exports = app => {
         { "nome": "Onix 1.6", "preco": 35000.0, "fotos": [`http://${ip}:8080/images/onix-16-1.jpg`, `http://${ip}:8080/images/onix-16-2.jpg`, `http://${ip}:8080/images/onix-16-3.jpg`] },
         { "nome": "Fiesta 2.0", "preco": 52000.0, "fotos": [`http://${ip}:8080/images/fiesta-20-1.jpg`, `http://${ip}:8080/images/fiesta-20-2.jpg`, `http://${ip}:8080/images/fiesta-20-3.jpg`] },
         { "nome": "C3 1.0", "preco": 22000.0, "fotos": [`http://${ip}:8080/images/c3-10-1.jpg`, `http://${ip}:8080/images/c3-10-2.jpg`, `http://${ip}:8080/images/c3-10-3.jpg`] },
-        { "nome": "Uno Fire", "preco": 11000.0, "fotos": [`http://${ip}:8080/images/uno-fire-1.jpg`, `http://${ip}:8080/images/uno-fire-2.jpg`, `http://${ip}:8080/images/uno-fire-3.jpg`] },
+        { "nome": "Uno Fire", "preco": 11000.0, "fotos": [`http://${ip}:8080/images/uno-fire-1.jpg`, `http://${ip}:8080/images/uno-fire-2.jpg`] },
         { "nome": "Sentra 2.0", "preco": 53000.0, "fotos": [`http://${ip}:8080/images/sentra-20-1.jpg`, `http://${ip}:8080/images/sentra-20-2.jpg`, `http://${ip}:8080/images/sentra-20-3.jpg`] },
         { "nome": "Astra Sedan", "preco": 39000.0, "fotos": [`http://${ip}:8080/images/astra-sedan-1.jpg`, `http://${ip}:8080/images/astra-sedan-2.jpg`] },
         { "nome": "Audi A3 Sedan", "preco": 115000.0, "fotos": [`http://${ip}:8080/images/audi-a3-sedan-1.jpg`, `http://${ip}:8080/images/audi-a3-sedan-2.jpg`, `http://${ip}:8080/images/audi-a3-sedan-3.jpg`] },
